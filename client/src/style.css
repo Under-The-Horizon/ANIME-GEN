@@ -3,7 +3,13 @@
     --card-width: calc(var(--card-height) / 1.5);
   }
 .Home{
-    background-image: url('./Image/Background6.png');
+    background-image: url('./Image/Background6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.SHOW{
+    background-image: url('./Image/Background6.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

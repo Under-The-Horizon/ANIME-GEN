@@ -27,10 +27,10 @@ export default function Example() {
   });
 
   return (
-    <Disclosure as="nav" className="absolute top-0 z-10 w-full bg-transparent backdrop-blur-xl">
+    <Disclosure as="nav" className="absolute top-0 z-10 w-full bg-transparent backdrop-blur-2xl border-b-2 border-red-300">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-full sm:px-8 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="hidden sm:ml-6 sm:block">
@@ -41,7 +41,7 @@ export default function Example() {
                         key={item.name}
                         to={item.href}
                         className={classNames(
-                          item.current ? 'bg-purple-500 text-white' : 'text-gray-200 hover:bg-purple-400 hover:text-white',
+                          item.current ? 'bg-red-600 text-white' : 'text-gray-200 hover:bg-red-600 hover:text-white',
                           'rounded-md px-4 py-2 text-lg font-semibold transition-all duration-300 transform hover:scale-105'
                         )}
                       >
@@ -74,18 +74,18 @@ export default function Example() {
                 {/* Login Icon */}
                 <a
                   href="/login"
-                  className="relative group mr-2 rounded-md border transition-all duration-300 hover:bg-gray-800"
+                  className="relative group mr-2 rounded-md transition-all duration-300"
                 >
                   <img src="/public/log.png" className="w-10 h-10 rounded-full" />
-                  <div className="absolute -left-0 -bottom-7 bg-white bg-opacity-70 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  {/* <div className="absolute -left-0 -bottom-7 bg-white bg-opacity-70 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
                     Login
-                  </div>
+                  </div> */}
                 </a>
 
                 {/* Dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="relative flex rounded-full bg-green-500 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <Menu.Button className="relative flex rounded-full bg-red-600 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
                       <i className="ri-user-3-fill h-8 w-8 rounded-full text-lg text-white transition-all duration-300 transform hover:scale-105"></i>
